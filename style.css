@@ -1,0 +1,63 @@
+
+
+
+.full-height-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch; /* que todos los hijos tengan misma altura */
+  gap: 2rem;
+  width: 100%;
+  min-height: 80vh; /* asegura que haya suficiente altura */
+}
+
+.card-size {
+  display: flex;
+  flex-direction: column;
+  min-width: 300px;
+  max-width: 500px;
+  height: 100%;
+ 
+}
+
+.table-container {
+  flex-grow: 1;
+  overflow-y: auto;
+}
+
+@media (min-width: 768px) {
+  table tbody {
+    display: block;
+    max-height: 420px;
+    overflow-y: auto;
+  }
+  table thead,
+  table tbody tr {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+  }
+}
+.box {
+  background-color: #28a745;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  font-size: 1rem;
+  width: 30%;
+  height: 30%;
+}
+@media (max-width: 768px) {
+  .full-height-row {
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+  }
+
+  .card-size {
+    width: 80vw; /* ocupan 80% del ancho de la pantalla */
+    max-width: none;
+  }
+}
